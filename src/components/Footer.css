@@ -1,0 +1,14 @@
+.container-footer {
+  display: flex;
+  height: 80px;
+  width: 100vw;
+  background-color: #200e38;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-footer h3 {
+  display: flex;
+  font-weight: lighter;
+  font-size: 1em;
+}

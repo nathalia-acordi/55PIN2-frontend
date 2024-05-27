@@ -1,0 +1,15 @@
+.container-banner {
+  display: flex;
+  background-color: #200e38;
+  height: 200px;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  margin-top: 75px;
+}
+
+.banner {
+  height: 200px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
