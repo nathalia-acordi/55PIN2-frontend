@@ -27,9 +27,14 @@ public class LivroService {
 	public List<LivroDTO> obterLivrosEmDestaque() {
 		return converteDados(repositorio.buscarLivrosEmDestaque());
 	}
+
+	public List<LivroDTO> obterLivrosPesquisados(String titulo) {
+		return converteDados(repositorio.buscarLivrosPesquisa(titulo));
+	}
 	
 	private List<LivroDTO> converteDados(List<Livros> livros) {
 		return livros.stream().map(l -> new LivroDTO(l.getId(), l.getTitulo(), l.getDescricao(), l.getIsbn(), l.getDataPublicacao(),l.getGenero()))
 				.collect(Collectors.toList());
 	}
+
 }

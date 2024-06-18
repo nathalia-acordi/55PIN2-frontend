@@ -16,5 +16,8 @@ public interface LivrosRepository extends JpaRepository<Livros, Long>{
 	
 	@Query("SELECT l FROM Livros l WHERE l.numeroEstrelas IS NOT NULL ORDER BY l.numeroEstrelas DESC LIMIT 5")
 	public List<Livros> buscarLivrosEmDestaque();
+	
+	@Query("SELECT l from Livros l where lower(l.titulo) LIKE lower(concat('%', :titulo, '%'))")
+	public List<Livros> buscarLivrosPesquisa(String titulo);
 
 }

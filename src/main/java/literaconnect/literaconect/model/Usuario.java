@@ -2,6 +2,8 @@ package literaconnect.literaconect.model;
 
 import java.time.LocalDate;
 
+import org.mindrot.jbcrypt.BCrypt;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,11 +20,11 @@ public class Usuario {
 	private String nomeCompleto;
 	private String nomeUsuario;
 	private LocalDate dataNascimento;
-	
-	//pq temos que colocar esse construtor vazio
+
+	// pq temos que colocar esse construtor vazio
 	public Usuario() {
 	}
-	
+
 	public Usuario(String email, String senha, String nomeCompleto, String nomeUsuario, LocalDate dataNascimento) {
 		this.email = email;
 		this.senha = senha;
@@ -52,7 +54,29 @@ public class Usuario {
 	}
 
 	public void setSenha(String senha) {
-		this.senha = senha;
+		this.senha = BCrypt.hashpw(senha, BCrypt.gensalt());
+	}
+
+	// Método para verificar a senha
+	public boolean checkSenha(String senha) {
+		return BCrypt.checkpw(senha, this.senha);
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o)
+			return true;
+		if (o == null || getClass() != o.getClass())
+			return false;
+
+		Usuario usuario = (Usuario) o;
+
+		return id != null ? id.equals(usuario.id) : usuario.id == null;
+	}
+
+	@Override
+	public int hashCode() {
+		return id != null ? id.hashCode() : 0;
 	}
 
 	public String getNomeCompleto() {
