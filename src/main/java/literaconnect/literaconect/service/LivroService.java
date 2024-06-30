@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import literaconnect.literaconect.dto.LivroDTO;
 import literaconnect.literaconect.model.Livros;
+import literaconnect.literaconect.model.Usuario;
 import literaconnect.literaconect.repository.LivrosRepository;
 
 @Service

@@ -7,11 +7,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import literaconnect.literaconect.repository.LivrosRepository;
 import literaconnect.literaconect.service.AdicionarLivrosBiblioteca;
+import literaconnect.literaconect.service.UsuarioRepository;
 
 @SpringBootApplication
 public class LiteraConectApplication implements CommandLineRunner {
 	@Autowired
 	private LivrosRepository repositorio;
+	
+	@Autowired
+	private UsuarioRepository repositorioUsuario;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(LiteraConectApplication.class, args);

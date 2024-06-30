@@ -1,5 +1,4 @@
 import "./BookCard.css";
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -24,19 +23,25 @@ function BookCard({ title }: any) {
           endpoint = 'livros-em-destaque';
           break;
         case 'Com base no seu histórico':
-          endpoint = 'base-no-historico';
           break;
         default:
-          // Tratamento de erro se o título não corresponder a nenhum endpoint conhecido
           console.error('Título não reconhecido:', title);
           return;
       }
 
       try {
         const response = await axios.get(`http://localhost:8080/api/livros/${encodeURIComponent(endpoint)}`);
-        setBooks(response.data);
+        // Check if response.data is an array before updating the state
+        console.log(response)
+        if (Array.isArray(response.data)) {
+          setBooks(response.data);
+        } else {
+          console.error('A resposta da API não é uma array:', response.data);
+          setBooks([]);
+        }
       } catch (error) {
         console.error('Erro ao buscar livros:', error);
+        setBooks([]);
       }
     }
 

@@ -10,50 +10,10 @@ html {
   font-family: Nunito, sans-serif;
 }
 
-.container-login {
-  background: url("./fundo-login.png") no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-.wrap-login {
-  width: 390px;
-  background-color: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  padding: 77px 55px 33px 55px;
-  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
-}
-
-.login-form {
-  width: 100%;
-}
-
-.login-form-title {
-  font-family: Nunito, sans-serif;
-  display: block;
-  font-size: 30px;
-  color: azure;
-  line-height: 1.2;
-  text-align: center;
-}
-
 .login-form-title img {
   width: 180px;
 }
 
-.wrap-input {
-  width: 100%;
-  position: relative;
-  border-bottom: 2px solid #adadad;
-  margin-bottom: 37px;
-}
 
 .input {
   margin-top: 40px;
@@ -183,8 +143,5 @@ html {
 }
 
 .txt2 {
-  font-size: 14px;
-  color: #6a0e47;
-  line-height: 1.5;
-  text-decoration: none;
+ 
 }
