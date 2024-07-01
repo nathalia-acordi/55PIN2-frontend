@@ -1,0 +1,103 @@
+.container-search {
+  display: flex;
+  background-color: #f8f9fa;
+  min-height: 86vh;
+  height: auto;
+  width: 100vw;
+  justify-content: left;
+  flex-direction: column;
+  align-items: left;
+  padding: 6em 2em 16em 2em;
+}
+
+.image-book-search {
+  height: 180px;
+  width: 120px;
+  background-color: #000;
+}
+
+.menu-search {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.container-search h1 {
+  padding: 0.8em;
+  display: flex;
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+.menu-search h1 {
+  color: #200e38;
+  opacity: 50%;
+}
+
+.container-search h2 {
+  color: #200e38;
+}
+
+.active {
+  opacity: 100% !important;
+  background-color: #dcb9e4;
+}
+
+.container-books-search {
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  align-items: flex-start; /* Alinha os itens verticalmente */
+  gap: 32px; /* Define um espaçamento entre os itens */
+
+  h3 {
+    color: #000;
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
+  h4 {
+    color: #000;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+}
+
+.book-item-search {
+  width: 90%;
+  display: flex;
+  gap: 16px;
+}
+
+select {
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 50px;
+  text-align: center;
+}
+
+button {
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background: #3d0a49;
+}

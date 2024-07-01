@@ -4,16 +4,14 @@ import LogoLogin from "../LogoLogin";
 import ContainerInputCadastro from "../ContainerInputCadastro";
 
 function CadastroConta() {
-    return(
-        <BackgroundContainer
-            fundo="url(../fundo-login.png) no-repeat">
-            <ContainerLoginWrap
-                largura="540px">
-                <LogoLogin/>
-                <ContainerInputCadastro/>
-            </ContainerLoginWrap>
-        </BackgroundContainer>
-    )
+  return (
+    <BackgroundContainer fundo="url(../fundo-login.png) no-repeat">
+      <ContainerLoginWrap largura="540px">
+        <LogoLogin />
+        <ContainerInputCadastro />
+      </ContainerLoginWrap>
+    </BackgroundContainer>
+  );
 }
 
-export default CadastroConta
+export default CadastroConta;

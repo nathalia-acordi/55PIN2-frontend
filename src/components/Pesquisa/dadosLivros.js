@@ -1,4 +1,4 @@
-const baseURL = 'http://localhost:8080';
+const baseURL = 'http://localhost:8083';
 
 export default function getDados(endpoint) {
     return fetch(`${baseURL}${endpoint}`)

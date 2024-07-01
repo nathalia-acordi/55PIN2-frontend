@@ -27,7 +27,6 @@
   margin-bottom: 1em;
   display: flex;
   width: 91vw;
-  justify-content: space-between;
   align-items: center; /* Alinha os itens verticalmente */
   gap: 10px; /* Define um espaçamento entre os itens */
 }
